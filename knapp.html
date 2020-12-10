@@ -1,0 +1,30 @@
+<html>
+<body>
+
+
+
+<button type="button" onclick="alert('sak')">knapp</button>
+<button onclick="knapp1()">knapp</button>
+
+<p id="demo"></p>
+<p onclick="knapp2(this, 'red')">ändra färg om du vill</p>
+
+
+<script>
+function knapp1() {
+  document.getElementById("demo").innerHTML = "sak2";
+}
+
+function knapp2(elmnt,clr) {
+  elmnt.style.color = clr;
+}
+</script>
+<button onclick="document.getElementById('myImage').src='låda.jpg'">in</button>
+
+<img id="myImage" src="katt.jpg" style="width:500px">
+
+<button onclick="document.getElementById('myImage').src='katt.jpg'">ut</button>
+
+
+</body>
+</html>

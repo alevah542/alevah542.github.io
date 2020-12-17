@@ -1,0 +1,35 @@
+<head>
+    <title>Gissa talet</title>
+    </head>
+    <body>
+    <script language="JavaScript">
+    var number = Math.floor(1+Math.random()*100);
+    
+    function guess() {
+       var g;
+       g = parseInt(document.gissa.gissning.value);
+       if (g == number) {
+          window.alert("Det var rätt!");
+          document.gissa.resultat.value = "";
+          number = Math.floor(1+Math.random()*100);
+       } else {
+          if (document.gissa.gissning.value < number) {
+             alert( "För litet!");
+          } else {
+             alert("För stort!");
+          }         
+       }
+       
+    
+    }
+    
+    </script>
+    
+    <h1> Gissa på ett tal mellan 1 och 100</h1>
+    <form name="gissa">
+    Skriv tal här<input name="gissning" type="text">
+    <input type="button" value="knapp" onclick="guess()"><p></p>
+    
+    </form>
+    
+    </body>
